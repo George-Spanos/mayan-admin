@@ -1,3 +1,12 @@
-<h1>
-  Καλη σπερα παιδια
-</h1>
+<mat-card>
+  <form fxLayout="column" [formGroup]="loginForm" (ngSubmit)="submitForm()">
+    <mat-form-field appearance="outline">
+      <input autocomplete="email" matInput type="email" formControlName="email" placeholder="Email">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <input autocomplete="current-password" matInput type="password" formControlName="password" placeholder="Password">
+    </mat-form-field>
+    <button mat-raised-button color="accent" fxFlexAlign="center">Login</button>
+  </form>
+</mat-card>
